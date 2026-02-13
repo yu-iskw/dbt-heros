@@ -1,0 +1,26 @@
+{
+  "version": "1",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"Hook triggered after tool use! Changed file: $(jq -r '.tool_output.file_path' <<< \"$CLAUDE_EVENT_CONTEXT\")\""
+          }
+        ]
+      }
+    ],
+    "TeammateIdle": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "The teammate is idle. Please provide a summary of work done so far based on $ARGUMENTS."
+          }
+        ]
+      }
+    ]
+  }
+}

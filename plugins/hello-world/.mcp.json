@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "sample-sqlite": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sqlite",
+        "--db",
+        "${CLAUDE_PLUGIN_ROOT}/data/sample.db"
+      ],
+      "env": {
+        "DEBUG": "true"
+      }
+    }
+  }
+}
