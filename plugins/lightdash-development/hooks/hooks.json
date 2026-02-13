@@ -1,0 +1,26 @@
+{
+  "version": "1",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "You are using the Lightdash Development plugin (Semantic Layer Focus). Ensure you are using dbt 1.10+ syntax for all YAML edits. This plugin operates in read-only mode for remote assets."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": ".*write_file|.*StrReplace",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "You have modified a file. If this was a dbt YAML file, consider running the 'validate-project' skill to ensure the semantic layer remains healthy."
+          }
+        ]
+      }
+    ]
+  }
+}

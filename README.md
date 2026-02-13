@@ -1,72 +1,74 @@
-# Claude Plugin Monorepo Template
+# dbt Superpowers
 
-Template repository for bootstrapping high-quality Claude Code plugins with shared CI/CD and testing infrastructure.
+Accelerate your dbt lifecycle with specialized Claude Code plugins. This repository provides high-performance agents and skills for mastering dbt Core, dbt Cloud, dbt Fusion, Elementary, and Lightdash.
 
-## Key Features
+## Available Plugins
 
-- **Standard Plugin Layout**: Follows best practices for Skills, Agents, Hooks, MCP, and LSP.
-- **Monorepo Ready**: Designed to host multiple plugins under the `plugins/` directory.
-- **Comprehensive Examples**: The `hello-world` plugin demonstrates every available extension point.
-- **Shared CI/CD**: Unified quality checks via `trunk` and GitHub Actions.
-- **Integration Tests**: Automated smoke tests that validate manifest schemas and component discovery across all plugins.
+<!-- START_PLUGIN_TABLE -->
 
-## Repository Layout
+| Category           | Plugin                                                       | Description                                                      | Status   |
+| :----------------- | :----------------------------------------------------------- | :--------------------------------------------------------------- | :------- |
+| **Semantic Layer** | [lightdash-development](./plugins/lightdash-development)     | dbt 1.10+ metrics, dimensions, and semantic layer modeling.      | ✅ GA    |
+| **Analysis**       | [lightdash-analysis](./plugins/lightdash-analysis)           | Data discovery and insight generation from Lightdash explores.   | ✅ GA    |
+| **Content Ops**    | [lightdash-content-admin](./plugins/lightdash-content-admin) | Space organization and content validation for Lightdash.         | ✅ GA    |
+| **Admin**          | [lightdash-org-admin](./plugins/lightdash-org-admin)         | Lightdash organization management (users, groups, projects).     | ✅ GA    |
+| **Quality**        | `elementary-admin`                                           | _Coming Soon_: Elementary data quality and monitor integration.  | 🏗️ Alpha |
+| **Lifecycle**      | `dbt-cloud-ops`                                              | _Coming Soon_: dbt Cloud job management and environment control. | 🏗️ Alpha |
 
-```text
-.
-├── plugins/                     # Container for all plugins
-│   └── hello-world/             # Comprehensive sample plugin
-│       ├── .claude-plugin/      # Plugin metadata (plugin.json)
-│       ├── agents/              # Custom agent definitions
-│       ├── skills/              # Model-invoked skills (SKILL.md)
-│       ├── hooks/               # Event hook configurations
-│       ├── .mcp.json            # MCP server configuration
-│       └── .lsp.json            # LSP server configuration
-├── integration_tests/           # Shared testing harness
-│   ├── run.sh                   # Test orchestrator (scans plugins/)
-│   ├── validate-manifest.sh     # Manifest JSON schema validator
-│   └── ...
-├── .github/workflows/           # GitHub Actions (Lint, Integration Tests)
-├── Makefile                     # Task runner
-└── README.md
-```
+<!-- END_PLUGIN_TABLE -->
+
+## Core Principles
+
+- **Agentic Workflows**: Move beyond static documentation into interactive, goal-oriented collaboration.
+- **Unified Interface**: A single repository for all dbt ecosystem extensions.
+- **Safety First**: Deterministic safety modes (`read-only`, `write-safe`, `write-destructive`) for all tools.
 
 ## Quickstart
 
-1.  **Create a new repository** from this template.
-2.  **Explore the sample plugin** in `plugins/hello-world/` to see how components are defined.
-3.  **Run local checks**:
-    ```bash
-    make lint
-    make test-integration-docker
-    ```
+### 1. Prerequisites
+
+Ensure you have [Claude Code](https://code.claude.com) installed and authenticated.
+
+### 2. Configuration
+
+Configure your environment with the relevant API keys. We recommend a `.env` file in your project root:
+
+```bash
+# Lightdash (Optional)
+LIGHTDASH_API_KEY=your_key
+LIGHTDASH_API_URL=https://app.lightdash.cloud/api/v1
+
+# dbt Cloud (Optional)
+DBT_CLOUD_API_TOKEN=your_token
+DBT_CLOUD_ACCOUNT_ID=your_id
+
+# Security Mode
+LIGHTDASH_TOOL_SAFETY_MODE=write-safe
+```
+
+### 3. Installation
+
+The most efficient way to use these plugins is by adding the repository as a local marketplace. This enables discovery and management of all specialized plugins through the `/plugin` interface.
+
+```bash
+# Within Claude Code
+/plugin marketplace add .
+```
+
+Alternatively, you can install individual plugins via the CLI:
+
+```bash
+claude plugin install ./plugins/lightdash-analysis
+# Add others as needed
+```
 
 ## Development
 
-### Adding a New Plugin
+This repository is a monorepo. To add a new plugin or contribute to existing ones, refer to our [Development Guide](./docs/development.md) (coming soon).
 
-Create a new directory in `plugins/` following the [Standard Plugin Layout](https://code.claude.com/docs/en/plugins-reference#standard-plugin-layout):
+- **Standard Layout**: Every plugin follows the `.claude-plugin/plugin.json` manifest standard.
+- **CI/CD**: Unified linting and integration testing via `make lint` and `make test-integration-docker`.
 
-- `plugins/<name>/.claude-plugin/plugin.json`: Required manifest.
-- `plugins/<name>/skills/`: Agent Skills folder.
-- `plugins/<name>/agents/`: Subagent markdown files.
-- `plugins/<name>/hooks/`: Event hook configurations.
-- `plugins/<name>/.mcp.json`: MCP configurations.
-- `plugins/<name>/.lsp.json`: LSP configurations.
+---
 
-### Testing
-
-The integration test runner (`./integration_tests/run.sh`) automatically discovers all directories in `plugins/` that contain a `.claude-plugin/plugin.json` file.
-
-- Run all tests: `./integration_tests/run.sh`
-- Verbose output: `./integration_tests/run.sh --verbose`
-- Skip loading tests (if Claude CLI is not installed): `./integration_tests/run.sh --skip-loading`
-
-## CI/CD
-
-- **Trunk Check**: Runs linters and static analysis on every PR.
-- **Integration Tests**: Automatically validates every plugin in the `plugins/` directory.
-
-## License
-
-Apache License 2.0. See `LICENSE`.
+License: Apache 2.0

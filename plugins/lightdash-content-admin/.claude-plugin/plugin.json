@@ -1,0 +1,14 @@
+{
+  "name": "lightdash-content-admin",
+  "version": "0.1.0",
+  "description": "Lightdash Content Administration plugin for managing spaces, charts, and dashboards within a project.",
+  "author": {
+    "name": "yu-iskw"
+  },
+  "license": "Apache-2.0",
+  "metadata": {
+    "category": "Content Ops",
+    "status": "GA"
+  },
+  "mcpServers": "./.mcp.json"
+}
