@@ -1,0 +1,26 @@
+{
+  "version": "1",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "You are using the dbt Resource Development plugin. Use dbt Fusion CLI for all compilation, testing, and execution. Follow dbt best practices: staging/intermediate/mart layering, ref() for dependencies, source() for raw tables. Always validate with `dbt compile` before running models."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": ".*write_file|.*StrReplace",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "You have modified a file. If this was a dbt SQL or YAML file, consider running the 'compile-project' skill to verify the project compiles cleanly, and 'validate-project' to run tests."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -50,6 +50,17 @@
       "source": "./plugins/lightdash-org-admin",
       "category": "admin",
       "homepage": "https://github.com/yu-iskw/dbt-superpowers/tree/main/plugins/lightdash-org-admin"
+    },
+    {
+      "name": "dbt-resource",
+      "description": "dbt Resource Development plugin for creating and managing dbt resources (models, sources, tests, macros, seeds, snapshots, metrics, docs) using dbt Fusion.",
+      "version": "0.1.0",
+      "author": {
+        "name": "yu-iskw"
+      },
+      "source": "./plugins/dbt-resource",
+      "category": "development",
+      "homepage": "https://github.com/yu-iskw/dbt-superpowers/tree/main/plugins/dbt-resource"
     }
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "name": "dbt-resource",
+  "version": "0.1.0",
+  "description": "dbt Resource Development plugin for creating and managing dbt resources (models, sources, tests, macros, seeds, snapshots, metrics, docs) using dbt Fusion.",
+  "author": {
+    "name": "yu-iskw"
+  },
+  "license": "Apache-2.0",
+  "keywords": ["category:Development", "status:GA"]
+}
