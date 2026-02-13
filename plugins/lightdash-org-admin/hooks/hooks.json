@@ -1,0 +1,26 @@
+{
+  "version": "1",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "You are using the Lightdash Admin plugin. This plugin supports user and project management. For destructive actions like user deletion, ensure 'LIGHTDASH_TOOL_SAFETY_MODE' is set to 'write-destructive' (currently: $LIGHTDASH_TOOL_SAFETY_MODE). ALWAYS obtain explicit user confirmation before any deletion."
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "lightdash_tools__delete_member",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/safety.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "lightdash-development",
+  "version": "0.1.0",
+  "description": "Lightdash Development plugin for semantic layer modeling (dbt YAML, metrics, dimensions).",
+  "author": {
+    "name": "yu-iskw"
+  },
+  "license": "Apache-2.0",
+  "keywords": ["category:Semantic Layer", "status:GA"],
+  "mcpServers": "./.mcp.json"
+}

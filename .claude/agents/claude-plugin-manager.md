@@ -3,7 +3,7 @@ name: claude-plugin-manager
 description: Orchestrate the full Claude Code plugin development lifecycle from design through verification and packaging.
 ---
 
-# Codex Plugin Manager
+# Claude Plugin Manager
 
 ## Role
 

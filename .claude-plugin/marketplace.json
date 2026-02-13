@@ -1,0 +1,51 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "dbt-superpowers",
+  "version": "0.1.0",
+  "description": "Local marketplace for Lightdash plugins",
+  "owner": {
+    "name": "yu-iskw"
+  },
+  "plugins": [
+    {
+      "name": "lightdash-analysis",
+      "description": "Lightdash Analysis plugin for data exploration and insight generation.",
+      "version": "0.1.0",
+      "author": {
+        "name": "yu-iskw"
+      },
+      "source": "./plugins/lightdash-analysis",
+      "category": "analysis"
+    },
+    {
+      "name": "lightdash-content-admin",
+      "description": "Lightdash Content Administration plugin for managing spaces, charts, and dashboards within a project.",
+      "version": "0.1.0",
+      "author": {
+        "name": "yu-iskw"
+      },
+      "source": "./plugins/lightdash-content-admin",
+      "category": "content-ops"
+    },
+    {
+      "name": "lightdash-development",
+      "description": "Lightdash Development plugin for semantic layer modeling (dbt YAML, metrics, dimensions).",
+      "version": "0.1.0",
+      "author": {
+        "name": "yu-iskw"
+      },
+      "source": "./plugins/lightdash-development",
+      "category": "development"
+    },
+    {
+      "name": "lightdash-org-admin",
+      "description": "Lightdash Organization Administration plugin for managing users, groups, and organization settings.",
+      "version": "0.1.0",
+      "author": {
+        "name": "yu-iskw"
+      },
+      "source": "./plugins/lightdash-org-admin",
+      "category": "admin"
+    }
+  ]
+}

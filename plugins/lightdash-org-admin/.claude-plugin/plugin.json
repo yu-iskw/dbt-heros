@@ -1,0 +1,11 @@
+{
+  "name": "lightdash-org-admin",
+  "version": "0.1.0",
+  "description": "Lightdash Organization Administration plugin for managing users, groups, and organization settings.",
+  "author": {
+    "name": "yu-iskw"
+  },
+  "license": "Apache-2.0",
+  "keywords": ["category:Admin", "status:GA"],
+  "mcpServers": "./.mcp.json"
+}

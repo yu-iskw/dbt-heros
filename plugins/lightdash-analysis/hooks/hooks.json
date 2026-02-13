@@ -1,0 +1,26 @@
+{
+  "version": "1",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "You are using the Lightdash Analysis plugin. This plugin is strictly non-destructive. If the user requests modifications or deletions, inform them that this plugin only supports data exploration and discovery."
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "lightdash_tools__delete_member|lightdash_tools__upsert_chart_as_code",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/safety.sh --strict"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+# Explore Data
+
+Skill for understanding the Lightdash semantic layer, including explores, metrics, dimensions, and query compilation.
+
+## Purpose
+
+Enables data exploration and verification of the semantic layer logic.
+
+## Tools
+
+Wraps the following MCP tools from the `lightdash` server:
+
+- `lightdash_tools__list_explores`
+- `lightdash_tools__get_explore`
+- `lightdash_tools__list_dimensions`
+- `lightdash_tools__list_metrics`
+- `lightdash_tools__get_field_lineage`
+- `lightdash_tools__compile_query`
+
+## Safety Mode Compliance
+
+- **Read-Only Tools**: All tools in this skill (`list_explores`, `get_explore`, `list_dimensions`, `list_metrics`, `get_field_lineage`, `compile_query`) are **safe** for `read-only` mode. `compile_query` only performs a dry-run compilation and does not execute data warehouse queries directly or mutate state.
+
+## Behavior
+
+1. **Discovery**: Use `list_explores` to see available tables/explores.
+2. **Detail Inspection**: Use `get_explore` to see the full list of dimensions and metrics for a specific explore.
+3. **Lineage Analysis**: Use `get_field_lineage` to understand the upstream dependencies of a specific field.
+4. **Logic Verification**: Use `compile_query` to verify that a metric query is valid before using it in a chart or report.
+
+## Rules
+
+- Use the exact `exploreId` and `fieldId` strings returned by the tools.
+- When searching for metrics, prefer using `list_metrics` across the data catalog.
