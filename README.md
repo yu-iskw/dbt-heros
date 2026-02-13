@@ -41,18 +41,43 @@ Refer to the [Product Documentation](#product-documentation) for detailed config
 
 ### 3. Installation
 
-The most efficient way to use these plugins is by adding the repository as a local marketplace. This enables discovery and management of all specialized plugins through the `/plugin` interface.
+The most efficient way to use these plugins is by adding this repository as a plugin marketplace. This enables discovery and management of all specialized plugins through the `/plugin` interface.
+
+#### Option A: Remote Marketplace (Recommended)
+
+Add the repository as a marketplace to enable easy discovery and updates:
 
 ```bash
 # Within Claude Code
-/plugin marketplace add .
+/plugin marketplace add yu-iskw/dbt-superpowers
 ```
 
-Alternatively, you can install individual plugins via the CLI:
+Once added, you can browse available plugins via `/plugin discover` or install them directly:
 
 ```bash
+# Within Claude Code
+/plugin install lightdash-analysis@dbt-superpowers
+```
+
+#### Option B: Direct Plugin Installation
+
+You can also install specific plugins directly using their GitHub path:
+
+```bash
+# Within Claude Code
+/plugin install yu-iskw/dbt-superpowers/plugins/lightdash-analysis
+```
+
+#### Option C: Local Installation (Development)
+
+If you have cloned the repository locally, you can add it as a local marketplace or install individual plugins from local paths:
+
+```bash
+# Add as a local marketplace (at the repository root)
+/plugin marketplace add .
+
+# Or install an individual plugin
 claude plugin install ./plugins/lightdash-analysis
-# Add others as needed
 ```
 
 ## Development

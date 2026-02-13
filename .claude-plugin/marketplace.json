@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "dbt-superpowers",
   "version": "0.1.0",
-  "description": "Local marketplace for Lightdash plugins",
+  "description": "A curated directory of high-performance Claude Code plugins for the dbt ecosystem, including Lightdash semantic layer modeling, analysis, and administration.",
   "owner": {
     "name": "yu-iskw"
   },
@@ -15,7 +15,8 @@
         "name": "yu-iskw"
       },
       "source": "./plugins/lightdash-analysis",
-      "category": "analysis"
+      "category": "analysis",
+      "homepage": "https://github.com/yu-iskw/dbt-superpowers/tree/main/plugins/lightdash-analysis"
     },
     {
       "name": "lightdash-content-admin",
@@ -25,7 +26,8 @@
         "name": "yu-iskw"
       },
       "source": "./plugins/lightdash-content-admin",
-      "category": "content-ops"
+      "category": "content-ops",
+      "homepage": "https://github.com/yu-iskw/dbt-superpowers/tree/main/plugins/lightdash-content-admin"
     },
     {
       "name": "lightdash-development",
@@ -35,7 +37,8 @@
         "name": "yu-iskw"
       },
       "source": "./plugins/lightdash-development",
-      "category": "development"
+      "category": "development",
+      "homepage": "https://github.com/yu-iskw/dbt-superpowers/tree/main/plugins/lightdash-development"
     },
     {
       "name": "lightdash-org-admin",
@@ -45,7 +48,8 @@
         "name": "yu-iskw"
       },
       "source": "./plugins/lightdash-org-admin",
-      "category": "admin"
+      "category": "admin",
+      "homepage": "https://github.com/yu-iskw/dbt-superpowers/tree/main/plugins/lightdash-org-admin"
     }
   ]
 }
