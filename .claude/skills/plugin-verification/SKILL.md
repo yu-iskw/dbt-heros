@@ -15,6 +15,59 @@ Run layered verification for extension components and plugin packaging before CI
 4. CLI load and visibility checks.
 5. Docker smoke-test parity with CI.
 
+## Project-Specific Validation (dbt-superpowers)
+
+When verifying plugins in this monorepo:
+
+### Repository-Wide Checks
+
+- **CLAUDE.md Context**: Verify CLAUDE.md exists and contains ~60-100 instructions
+- **Repository Rules**: Ensure `.claude/rules/` directory exists with required rule files
+- **Symlink Topology**: Validate critical symlinks (see ADR-0013):
+  - `.agents/skills` → `../.claude/skills`
+  - `.claude/agents` → `../.agents/agents`
+  - `.cursor/skills/shared` → `../../.agents/skills`
+- **ADR Compliance**: Check that architectural changes have corresponding ADRs
+
+### Monorepo-Specific Plugin Checks
+
+- **Naming Convention**: Plugin name uses lowercase-with-hyphens format
+- **Shared vs Plugin Components**:
+  - Verify shared skills are in `.claude/skills/`, not plugin directories
+  - Verify plugin-specific components are in `plugins/{name}/`
+- **Safety Enforcement**: For plugins with destructive tools:
+  - Verify PreToolUse hooks are defined in `hooks/hooks.json`
+  - Check safety scripts exist and are executable
+  - Validate safety mode documentation in README
+- **Plugin Independence**: Verify plugin works independently (no hard dependencies on other plugins)
+
+### Integration Test Suite
+
+Before marking verification complete:
+
+- `make format` - Apply formatting (must pass)
+- `make lint` - Trunk linter checks (must pass)
+- `make test-integration-docker` - Full Docker-based integration tests
+- `./integration_tests/validate-manifest.sh` - Manifest validation
+- `./integration_tests/test-plugin-loading.sh` - Plugin load verification
+- `./integration_tests/validate-agent-links.sh` - Symlink topology check
+
+### Documentation Completeness
+
+- Plugin `README.md` exists with installation and usage instructions
+- Plugin entry in root `README.md` plugin table (with status badge)
+- Plugin documentation in `docs/plugins/` (if applicable)
+- ADR created if plugin introduces new patterns (reference ADR-0002)
+
+### Cross-Plugin Consistency
+
+For this monorepo with multiple Lightdash plugins:
+
+- Verify similar patterns are implemented consistently across plugins
+- Check that shared Lightdash patterns are extracted to `.claude/skills/`
+- Validate plugin separation of concerns (analysis vs development vs admin)
+- Ensure safety modes are consistent with plugin purposes
+
 ## Progressive Disclosure
 
 - Validation level model: `references/validation-levels.md`

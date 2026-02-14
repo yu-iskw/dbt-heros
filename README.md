@@ -86,6 +86,7 @@ This repository is a monorepo. To add a new plugin or contribute to existing one
 
 - **Standard Layout**: Every plugin follows the `.claude-plugin/plugin.json` manifest standard.
 - **CI/CD**: Unified linting and integration testing via `make lint` and `make test-integration-docker`.
+- **Codex**: Project instructions are in `AGENTS.md`; shared skills are in `.agents/skills` (symlink to `.claude/skills`).
 
 ---
 

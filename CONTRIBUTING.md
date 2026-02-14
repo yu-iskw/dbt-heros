@@ -35,6 +35,7 @@ You can also run integration scripts directly:
 
 - Skills:
   - Add under `skills/<skill-name>/SKILL.md`
+  - Repository shared skills live in `.claude/skills/`; Codex loads them via the `.agents/skills` symlink (single source of truth).
   - Keep instructions specific, testable, and deterministic
 - Agents:
   - Add Markdown files under `agents/`
@@ -56,6 +57,10 @@ You can also run integration scripts directly:
 
 - Use clear, imperative commit messages.
 - Prefer small commits that are easy to review.
+
+## Documentation
+
+- When the repository operating contract or cross-platform agent guidance changes, update both `CLAUDE.md` and `AGENTS.md` in the same change. `AGENTS.md` is the Codex-facing summary; keep it aligned with `CLAUDE.md`.
 
 ## Reporting Issues
 
