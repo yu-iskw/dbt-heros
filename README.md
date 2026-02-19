@@ -49,14 +49,14 @@ Add the repository as a marketplace to enable easy discovery and updates:
 
 ```bash
 # Within Claude Code
-/plugin marketplace add yu-iskw/dbt-superpowers
+/plugin marketplace add yu-iskw/dbt-heros
 ```
 
 Once added, you can browse available plugins via `/plugin discover` or install them directly:
 
 ```bash
 # Within Claude Code
-/plugin install lightdash-analysis@dbt-superpowers
+/plugin install lightdash-analysis@dbt-heros
 ```
 
 #### Option B: Direct Plugin Installation
@@ -65,7 +65,7 @@ You can also install specific plugins directly using their GitHub path:
 
 ```bash
 # Within Claude Code
-/plugin install yu-iskw/dbt-superpowers/plugins/lightdash-analysis
+/plugin install yu-iskw/dbt-heros/plugins/lightdash-analysis
 ```
 
 #### Option C: Local Installation (Development)

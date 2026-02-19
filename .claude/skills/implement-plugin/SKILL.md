@@ -15,7 +15,7 @@ Implement plugin-level packaging, manifest wiring, structure checks, runtime loa
 4. Verify runtime load with `--plugin-dir` and optional install flow.
 5. Run CI-parity smoke tests before distribution.
 
-## Project-Specific Patterns (dbt-superpowers)
+## Project-Specific Patterns (dbt-heros)
 
 When working in this repository:
 
