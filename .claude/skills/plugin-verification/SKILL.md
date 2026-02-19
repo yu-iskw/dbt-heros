@@ -15,7 +15,7 @@ Run layered verification for extension components and plugin packaging before CI
 4. CLI load and visibility checks.
 5. Docker smoke-test parity with CI.
 
-## Project-Specific Validation (dbt-superpowers)
+## Project-Specific Validation (dbt-heros)
 
 When verifying plugins in this monorepo:
 
