@@ -1,4 +1,4 @@
-# dbt Superpowers
+# dbt Heros
 
 Accelerate your dbt lifecycle with specialized Claude Code plugins. This repository provides high-performance agents and skills for mastering dbt Core, dbt Cloud, dbt Fusion, Elementary, and Lightdash.
 
