@@ -6,12 +6,18 @@ Accelerate your dbt lifecycle with specialized Claude Code plugins. This reposit
 
 <!-- START_PLUGIN_TABLE -->
 
-| Category           | Plugin                                                       | Description                                                    | Status |
-| :----------------- | :----------------------------------------------------------- | :------------------------------------------------------------- | :----- |
-| **Semantic Layer** | [lightdash-development](./plugins/lightdash-development)     | dbt 1.10+ metrics, dimensions, and semantic layer modeling.    | ✅ GA  |
-| **Analysis**       | [lightdash-analysis](./plugins/lightdash-analysis)           | Data discovery and insight generation from Lightdash explores. | ✅ GA  |
-| **Content Ops**    | [lightdash-content-admin](./plugins/lightdash-content-admin) | Space organization and content validation for Lightdash.       | ✅ GA  |
-| **Admin**          | [lightdash-org-admin](./plugins/lightdash-org-admin)         | Lightdash organization management (users, groups, projects).   | ✅ GA  |
+| Category           | Plugin                                                       | Description                                                    | Status     |
+| :----------------- | :----------------------------------------------------------- | :------------------------------------------------------------- | :--------- |
+| **Semantic Layer** | [lightdash-development](./plugins/lightdash-development)     | dbt 1.10+ metrics, dimensions, and semantic layer modeling.    | ✅ GA      |
+| **Analysis**       | [lightdash-analysis](./plugins/lightdash-analysis)           | Data discovery and insight generation from Lightdash explores. | ✅ GA      |
+| **Content Ops**    | [lightdash-content-admin](./plugins/lightdash-content-admin) | Space organization and content validation for Lightdash.       | ✅ GA      |
+| **Admin**          | [lightdash-org-admin](./plugins/lightdash-org-admin)         | Lightdash organization management (users, groups, projects).   | ✅ GA      |
+| **dbt**            | [dbt-fusion-development](./plugins/dbt-fusion-development)   | dbt Fusion (Rust) resource development (build, run, test).     | 🏗️ Preview |
+| **dbt**            | [dbt-fusion-analysis](./plugins/dbt-fusion-analysis)         | dbt Fusion project exploration and SL utilization.             | 🏗️ Preview |
+| **dbt**            | [dbt-fusion-ops](./plugins/dbt-fusion-ops)                   | dbt Fusion environment and dependency management.              | 🏗️ Preview |
+| **dbt**            | [dbt-core-development](./plugins/dbt-core-development)       | dbt Core resource development (build, run, test).              | ✅ GA      |
+| **dbt**            | [dbt-core-analysis](./plugins/dbt-core-analysis)             | dbt Core project exploration and SL utilization.               | ✅ GA      |
+| **dbt**            | [dbt-core-ops](./plugins/dbt-core-ops)                       | dbt Core environment and dependency management.                | ✅ GA      |
 
 <!-- END_PLUGIN_TABLE -->
 
@@ -36,6 +42,7 @@ Refer to the [Product Documentation](#product-documentation) for detailed config
 <!-- START_DOCS_LIST -->
 
 - [Lightdash Plugins Documentation](./docs/plugins/lightdash_plugins.md)
+- [dbt Plugins Documentation](./docs/plugins/dbt_plugins.md)
 
 <!-- END_DOCS_LIST -->
 
@@ -49,14 +56,14 @@ Add the repository as a marketplace to enable easy discovery and updates:
 
 ```bash
 # Within Claude Code
-/plugin marketplace add yu-iskw/dbt-superpowers
+/plugin marketplace add yu-iskw/dbt-heros
 ```
 
 Once added, you can browse available plugins via `/plugin discover` or install them directly:
 
 ```bash
 # Within Claude Code
-/plugin install lightdash-analysis@dbt-superpowers
+/plugin install lightdash-analysis@dbt-heros
 ```
 
 #### Option B: Direct Plugin Installation
@@ -65,7 +72,7 @@ You can also install specific plugins directly using their GitHub path:
 
 ```bash
 # Within Claude Code
-/plugin install yu-iskw/dbt-superpowers/plugins/lightdash-analysis
+/plugin install yu-iskw/dbt-heros/plugins/lightdash-analysis
 ```
 
 #### Option C: Local Installation (Development)

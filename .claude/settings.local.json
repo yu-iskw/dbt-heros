@@ -1,5 +1,8 @@
 {
   "permissions": {
     "allow": ["Bash(make lint:*)", "Bash(trunk check:*)", "Bash(bash:*)"]
+  },
+  "enabledPlugins": {
+    "lightdash-org-admin@dbt-heros": true
   }
 }

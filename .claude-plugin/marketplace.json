@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "dbt-superpowers",
+  "name": "dbt-heros",
   "version": "0.1.0",
   "description": "A curated directory of high-performance Claude Code plugins for the dbt ecosystem, including Lightdash semantic layer modeling, analysis, and administration.",
   "owner": {
@@ -16,7 +16,7 @@
       },
       "source": "./plugins/lightdash-analysis",
       "category": "analysis",
-      "homepage": "https://github.com/yu-iskw/dbt-superpowers/tree/main/plugins/lightdash-analysis"
+      "homepage": "https://github.com/yu-iskw/dbt-heros/tree/main/plugins/lightdash-analysis"
     },
     {
       "name": "lightdash-content-admin",
@@ -27,7 +27,7 @@
       },
       "source": "./plugins/lightdash-content-admin",
       "category": "content-ops",
-      "homepage": "https://github.com/yu-iskw/dbt-superpowers/tree/main/plugins/lightdash-content-admin"
+      "homepage": "https://github.com/yu-iskw/dbt-heros/tree/main/plugins/lightdash-content-admin"
     },
     {
       "name": "lightdash-development",
@@ -38,7 +38,7 @@
       },
       "source": "./plugins/lightdash-development",
       "category": "development",
-      "homepage": "https://github.com/yu-iskw/dbt-superpowers/tree/main/plugins/lightdash-development"
+      "homepage": "https://github.com/yu-iskw/dbt-heros/tree/main/plugins/lightdash-development"
     },
     {
       "name": "lightdash-org-admin",
@@ -49,7 +49,73 @@
       },
       "source": "./plugins/lightdash-org-admin",
       "category": "admin",
-      "homepage": "https://github.com/yu-iskw/dbt-superpowers/tree/main/plugins/lightdash-org-admin"
+      "homepage": "https://github.com/yu-iskw/dbt-heros/tree/main/plugins/lightdash-org-admin"
+    },
+    {
+      "name": "dbt-fusion-development",
+      "description": "dbt Fusion Development plugin for creating and modifying dbt resources (Rust, AOT).",
+      "version": "0.1.0",
+      "author": {
+        "name": "yu-iskw"
+      },
+      "source": "./plugins/dbt-fusion-development",
+      "category": "dbt",
+      "homepage": "https://github.com/yu-iskw/dbt-heros/tree/main/plugins/dbt-fusion-development"
+    },
+    {
+      "name": "dbt-fusion-analysis",
+      "description": "dbt Fusion Analysis plugin for project inspection, data preview, and semantic layer utilization.",
+      "version": "0.1.0",
+      "author": {
+        "name": "yu-iskw"
+      },
+      "source": "./plugins/dbt-fusion-analysis",
+      "category": "dbt",
+      "homepage": "https://github.com/yu-iskw/dbt-heros/tree/main/plugins/dbt-fusion-analysis"
+    },
+    {
+      "name": "dbt-fusion-ops",
+      "description": "dbt Fusion Operations plugin for environment maintenance, debugging, and dependency management.",
+      "version": "0.1.0",
+      "author": {
+        "name": "yu-iskw"
+      },
+      "source": "./plugins/dbt-fusion-ops",
+      "category": "dbt",
+      "homepage": "https://github.com/yu-iskw/dbt-heros/tree/main/plugins/dbt-fusion-ops"
+    },
+    {
+      "name": "dbt-core-development",
+      "description": "dbt Core Development plugin for creating and modifying dbt resources.",
+      "version": "0.1.0",
+      "author": {
+        "name": "yu-iskw"
+      },
+      "source": "./plugins/dbt-core-development",
+      "category": "dbt",
+      "homepage": "https://github.com/yu-iskw/dbt-heros/tree/main/plugins/dbt-core-development"
+    },
+    {
+      "name": "dbt-core-analysis",
+      "description": "dbt Core Analysis plugin for project inspection, data preview, and semantic layer utilization.",
+      "version": "0.1.0",
+      "author": {
+        "name": "yu-iskw"
+      },
+      "source": "./plugins/dbt-core-analysis",
+      "category": "dbt",
+      "homepage": "https://github.com/yu-iskw/dbt-heros/tree/main/plugins/dbt-core-analysis"
+    },
+    {
+      "name": "dbt-core-ops",
+      "description": "dbt Core Operations plugin for environment maintenance, debugging, and dependency management.",
+      "version": "0.1.0",
+      "author": {
+        "name": "yu-iskw"
+      },
+      "source": "./plugins/dbt-core-ops",
+      "category": "dbt",
+      "homepage": "https://github.com/yu-iskw/dbt-heros/tree/main/plugins/dbt-core-ops"
     }
   ]
 }
