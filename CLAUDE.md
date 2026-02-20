@@ -1,4 +1,4 @@
-# dbt Superpowers - Claude Code Context
+# dbt Heros
 
 ## Project Identity
 

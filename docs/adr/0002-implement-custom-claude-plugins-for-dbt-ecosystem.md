@@ -12,7 +12,7 @@ The project aims to enhance the development workflow for the dbt ecosystem, spec
 
 Currently, developers manage these tools independently, leading to inconsistent workflows and manual configuration overhead. We need a unified approach to streamline development, testing, and deployment across these platforms.
 
-The `superpowers` plugin framework provides a robust foundation for building agentic skills and workflows. By leveraging this framework, we can create specialized plugins that encapsulate domain-specific knowledge and best practices for each tool in the dbt ecosystem.
+The `dbt-heros` plugin framework provides a robust foundation for building agentic skills and workflows. By leveraging this framework, we can create specialized plugins that encapsulate domain-specific knowledge and best practices for each tool in the dbt ecosystem.
 
 Key requirements:
 
@@ -23,7 +23,7 @@ Key requirements:
 
 ## Decision
 
-We will implement a suite of custom Claude Code plugins built on top of the `superpowers` framework. The architecture will consist of:
+We will implement a suite of custom Claude Code plugins built on top of the `dbt-heros` framework. The architecture will consist of:
 
 1. **Core dbt Plugin**:
    - Handles dbt project structure, configuration, and execution.
@@ -40,8 +40,8 @@ We will implement a suite of custom Claude Code plugins built on top of the `sup
    - Provides skills for setting up data monitoring and anomaly detection.
    - Automates the generation of observability reports.
 
-4. **Superpowers Integration**:
-   - Each plugin will register its skills and commands with the Superpowers framework.
+4. **Heros Integration**:
+   - Each plugin will register its skills and commands with the Heros framework.
    - We will follow the standard plugin structure: `agents`, `commands`, `hooks`, and `skills`.
 
 This approach allows us to:
