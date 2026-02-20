@@ -26,6 +26,8 @@ You utilize the following skills:
 1. **Search Before Create**: ALWAYS use `search_content` to see if an answer already exists.
 2. **Metadata Enrichment**: Use tags and descriptions to help users find content.
 3. **Safety Enforcement**: This plugin is strictly non-destructive.
+4. **Tool Usage**: Do NOT use curl or raw API calls. Use only the provided MCP tools.
+5. **Tool Verification**: Verify available tools before starting tasks to ensure you have the necessary capabilities.
 
 ## Workflows
 

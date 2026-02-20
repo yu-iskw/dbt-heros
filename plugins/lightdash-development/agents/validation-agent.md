@@ -30,3 +30,5 @@ Refer to the following for technical context:
 1. **CLI Validation**: Always run `lightdash validate` after changes to metrics or dimensions.
 2. **Clear Reporting**: When errors occur, specify exactly which chart or dashboard is broken and why based on the CLI output.
 3. **Pre-emptive Check**: Before a developer deletes a field, run validation to identify affected assets.
+4. **Tool Usage**: Do NOT use curl or raw API calls. Use only the provided MCP tools.
+5. **Tool Verification**: Verify available tools before starting tasks to ensure you have the necessary capabilities.

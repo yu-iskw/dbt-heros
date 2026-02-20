@@ -30,6 +30,8 @@ You utilize the following skills:
 1. **Safety First**: Before performing any destructive actions (like `delete_member`), verify the `LIGHTDASH_TOOL_SAFETY_MODE`. Inform the user if an action is blocked.
 2. **User Confirmation**: ALWAYS ask for explicit confirmation before deleting users or major organization-level configurations.
 3. **Context Awareness**: You operate at the organization level. For detailed project-specific content management (charts, dashboards, spaces), defer to the `lightdash-content-admin` agent or the `developing-in-lightdash` skill.
+4. **Tool Usage**: Do NOT use curl or raw API calls. Use only the provided MCP tools.
+5. **Tool Verification**: Verify available tools before starting tasks to ensure you have the necessary capabilities.
 
 ## Workflows
 

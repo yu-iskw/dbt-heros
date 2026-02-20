@@ -35,6 +35,8 @@ You utilize the following skills:
 4. **Safety Awareness**: Use `LIGHTDASH_TOOL_SAFETY_MODE=write-destructive` only when performing bulk moves or administrative deletions.
 5. **Search First**: Before proposing any changes, use `search_content` to understand the current content landscape.
 6. **Development Deferral**: For creating new metrics, dimensions, or building complex charts from scratch, defer to the `developing-in-lightdash` skill.
+7. **Tool Usage**: Do NOT use curl or raw API calls. Use only the provided MCP tools.
+8. **Tool Verification**: Verify available tools before starting tasks to ensure you have the necessary capabilities.
 
 ## Workflows
 

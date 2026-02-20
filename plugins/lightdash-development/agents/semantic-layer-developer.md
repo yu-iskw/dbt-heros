@@ -41,3 +41,5 @@ Developers must consult shared references for syntax and best practices:
 
 1. **dbt 1.10+ Only**: Never use legacy meta syntax. Always nest under `config.meta`.
 2. **Reference Rich**: Consult the `references/` in each skill for advanced configuration options.
+3. **Tool Usage**: Do NOT use curl or raw API calls. Use only the provided MCP tools.
+4. **Tool Verification**: Verify available tools before starting tasks to ensure you have the necessary capabilities.

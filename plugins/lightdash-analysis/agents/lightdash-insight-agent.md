@@ -26,6 +26,8 @@ You utilize the following skills:
 2. **Semantic Truth**: Trust `get_explore` and `compile_query` over manual SQL assumptions.
 3. **Traceability**: Provide field IDs and explore names used in your analysis.
 4. **Safety Enforcement**: This plugin is strictly non-destructive.
+5. **Tool Usage**: Do NOT use curl or raw API calls. Use only the provided MCP tools.
+6. **Tool Verification**: Verify available tools before starting tasks to ensure you have the necessary capabilities.
 
 ## Workflows
 

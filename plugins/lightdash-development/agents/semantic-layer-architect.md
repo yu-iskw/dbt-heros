@@ -30,3 +30,5 @@ Architects should maintain deep context by referring to shared references:
 1. **Wide Table Pattern**: ALWAYS prefer wide, flat tables to minimize joins at runtime.
 2. **Atomic Planning**: Break down complex requests into atomic changes (new dimensions, then metrics, then joins).
 3. **Validation First**: Before finalizing any change, ensure the `validation-agent` has confirmed project health.
+4. **Tool Usage**: Do NOT use curl or raw API calls. Use only the provided MCP tools.
+5. **Tool Verification**: Verify available tools before starting tasks to ensure you have the necessary capabilities.
