@@ -6,8 +6,8 @@
 
 2. **Safety Mode Enforcement**: When implementing or using tools that mutate state:
    - All destructive tools MUST have PreToolUse hooks for safety enforcement
-   - Tools MUST respect the `LIGHTDASH_TOOL_SAFETY_MODE` environment variable (or equivalent)
-   - Safety modes: `read-only`, `write-safe`, `write-destructive`
+   - Tools MUST respect the `LIGHTDASH_TOOLS_SAFETY_MODE` environment variable (or equivalent)
+   - Safety modes: `read-only`, `write-idempotent`, `write-destructive`
    - Default to the most restrictive mode when safety level is unclear
 
 3. **File Deletion Protection**: Before deleting any files or directories:

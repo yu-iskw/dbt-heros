@@ -25,13 +25,13 @@ done
 
 if [[ ${IS_DESTRUCTIVE} == "true" ]]; then
 	# Check safety mode or strict mode
-	if [[ ${STRICT_MODE} == "true" || ${LIGHTDASH_TOOL_SAFETY_MODE} != "write-destructive" ]]; then
+	if [[ ${STRICT_MODE} == "true" || ${LIGHTDASH_TOOLS_SAFETY_MODE} != "write-destructive" ]]; then
 		# Return a JSON decision to block the tool
 		REASON="CRITICAL SECURITY BLOCK: Tool ${TOOL_NAME} is blocked."
 		if [[ ${STRICT_MODE} == "true" ]]; then
 			REASON="${REASON} This plugin is strictly non-destructive."
 		else
-			REASON="${REASON} LIGHTDASH_TOOL_SAFETY_MODE is not set to \"write-destructive\" (current: \"${LIGHTDASH_TOOL_SAFETY_MODE}\")."
+			REASON="${REASON} LIGHTDASH_TOOLS_SAFETY_MODE is not set to \"write-destructive\" (current: \"${LIGHTDASH_TOOLS_SAFETY_MODE}\")."
 		fi
 
 		jq -n --arg reason "${REASON}" '{

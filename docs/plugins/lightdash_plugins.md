@@ -13,9 +13,11 @@ LIGHTDASH_API_KEY=your_key
 LIGHTDASH_API_URL=https://app.lightdash.cloud/api/v1
 
 # Security Mode
-# Options: read-only, write-safe, write-destructive
-LIGHTDASH_TOOL_SAFETY_MODE=write-safe
+# Options: read-only, write-idempotent, write-destructive
+LIGHTDASH_TOOLS_SAFETY_MODE=write-idempotent
 ```
+
+For agent discoverability (e.g. `lightdash-ai schema list`), see [lightdash-ai-cli.md](../../plugins/lightdash-development/skills/shared/references/lightdash-ai-cli.md).
 
 ## Installation
 

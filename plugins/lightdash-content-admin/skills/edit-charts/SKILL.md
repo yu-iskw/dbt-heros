@@ -15,7 +15,7 @@ Wraps the following MCP tools from the `lightdash` server:
 ## Safety Mode Compliance
 
 - **Write-Destructive Tools**: `upsert_chart_as_code`.
-- **Constraint**: `upsert_chart_as_code` is restricted to administrative updates when `LIGHTDASH_TOOL_SAFETY_MODE` is set to `write-destructive`.
+- **Constraint**: `upsert_chart_as_code` is restricted to administrative updates when `LIGHTDASH_TOOLS_SAFETY_MODE` is set to `write-destructive`.
 
 ## Behavior
 

@@ -19,7 +19,7 @@ We will implement deterministic safety enforcement using Claude Code hooks and a
 We will create a shell script `.claude/hooks/lightdash-safety.sh` that:
 
 - Reads the hook input JSON.
-- Checks the `LIGHTDASH_TOOL_SAFETY_MODE` environment variable.
+- Checks the `LIGHTDASH_TOOLS_SAFETY_MODE` environment variable.
 - Returns a `permissionDecision: "deny"` if a destructive tool is called and the safety mode is not set to `write-destructive`.
 - Provides clear feedback to the agent explaining why the tool was blocked.
 
@@ -37,7 +37,7 @@ Each plugin containing destructive tools will register a `PreToolUse` hook in it
 graph TD
     Agent[Claude Agent] -->|Tool Call| Hook[PreToolUse Hook]
     Hook -->|Tool Info| Script[lightdash-safety.sh]
-    Script -->|Check Env| Env{LIGHTDASH_TOOL_SAFETY_MODE}
+    Script -->|Check Env| Env{LIGHTDASH_TOOLS_SAFETY_MODE}
     Env -->|not write-destructive| Block[Block Tool + Feedback]
     Env -->|write-destructive| Allow[Allow Tool]
 ```

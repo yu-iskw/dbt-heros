@@ -36,7 +36,7 @@ Wraps the following MCP tools from the `lightdash-tools` server:
    - When creating or updating an agent, ensure the `systemPrompt` is clear and follows Lightdash best practices.
    - Reference the `eval-driven-agentops.mdc` rule to ensure an evaluation suite is in place before making significant prompt changes.
 3. **Safety Enforcement**:
-   - Deletion of an agent requires `LIGHTDASH_TOOL_SAFETY_MODE=write-destructive`.
+   - Deletion of an agent requires `LIGHTDASH_TOOLS_SAFETY_MODE=write-destructive`.
 
 ## Rules
 

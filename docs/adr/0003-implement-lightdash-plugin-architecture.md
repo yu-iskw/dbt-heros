@@ -17,7 +17,7 @@ We will implement a single Claude Code plugin located at `plugins/lightdash` tha
 1. **Strict Security Posture**:
    - The plugin strictly disallows tools requiring `write-destructive` permissions (e.g., `delete_member`, `upsert_chart_as_code`).
    - Multi-layered security is implemented via environment variables, skill definitions, and pre-tool-use hooks.
-2. **Safety Modes**: Enforcement of `LIGHTDASH_TOOL_SAFETY_MODE` (defaulting to `read-only`).
+2. **Safety Modes**: Enforcement of `LIGHTDASH_TOOLS_SAFETY_MODE` (defaulting to `read-only`).
 3. **Atomic Skills**:
    - `manage-projects`: Project configuration and validation (Read-only).
    - `manage-users`: User and group discovery (Read-only).
@@ -68,7 +68,7 @@ graph TB
 ## Consequences
 
 - **Positive**:
-  - Granular safety control via `LIGHTDASH_TOOL_SAFETY_MODE`.
+  - Granular safety control via `LIGHTDASH_TOOLS_SAFETY_MODE`.
   - Specialized agents for different user personas.
   - Centralized logic for interacting with Lightdash tools.
 - **Negative**:

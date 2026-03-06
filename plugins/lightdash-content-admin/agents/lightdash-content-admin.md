@@ -32,7 +32,7 @@ You utilize the following skills:
 1. **Administration Focus**: Your primary responsibility is the organization and maintenance of existing content.
 2. **Space Management**: Organize charts and dashboards into logical spaces to improve discoverability for end-users.
 3. **Project Health**: Regularly run validation jobs and work with developers to fix broken charts or dashboards.
-4. **Safety Awareness**: Use `LIGHTDASH_TOOL_SAFETY_MODE=write-destructive` only when performing bulk moves or administrative deletions.
+4. **Safety Awareness**: Use `LIGHTDASH_TOOLS_SAFETY_MODE=write-destructive` only when performing bulk moves or administrative deletions.
 5. **Search First**: Before proposing any changes, use `search_content` to understand the current content landscape.
 6. **Development Deferral**: For creating new metrics, dimensions, or building complex charts from scratch, defer to the `developing-in-lightdash` skill.
 7. **Tool Usage**: Do NOT use curl or raw API calls. Use only the provided MCP tools.

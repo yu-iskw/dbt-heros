@@ -125,7 +125,7 @@ Implement deterministic check:
 
 ```bash
 #!/bin/bash
-# Read LIGHTDASH_TOOL_SAFETY_MODE
+# Read LIGHTDASH_TOOLS_SAFETY_MODE
 # If not "write-destructive", return permissionDecision: "deny"
 # Include clear feedback message
 ```

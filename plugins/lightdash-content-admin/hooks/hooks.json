@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "You are using the Lightdash Dashboard Development plugin. This plugin supports creating and updating charts and dashboards. For upserting charts, ensure 'LIGHTDASH_TOOL_SAFETY_MODE' is set to 'write-destructive' (currently: $LIGHTDASH_TOOL_SAFETY_MODE). Your focus is on visualization, UX, and content organization."
+            "prompt": "You are using the Lightdash Dashboard Development plugin. This plugin supports creating and updating charts and dashboards. For upserting charts, ensure 'LIGHTDASH_TOOLS_SAFETY_MODE' is set to 'write-destructive' (currently: $LIGHTDASH_TOOLS_SAFETY_MODE). Your focus is on visualization, UX, and content organization."
           }
         ]
       }

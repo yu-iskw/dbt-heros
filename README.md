@@ -20,7 +20,7 @@ Accelerate your dbt lifecycle with specialized Claude Code plugins. This reposit
 
 - **Agentic Workflows**: Move beyond static documentation into interactive, goal-oriented collaboration.
 - **Unified Interface**: A single repository for all dbt ecosystem extensions.
-- **Safety First**: Deterministic safety modes (`read-only`, `write-safe`, `write-destructive`) for all tools.
+- **Safety First**: Deterministic safety modes (`read-only`, `write-idempotent`, `write-destructive`) for all tools.
 
 ## Quickstart
 
