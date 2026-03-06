@@ -18,4 +18,4 @@ LIGHTDASH_API_URL=https://app.lightdash.cloud/api/v1
 
 ## Configuration
 
-Operates in `LIGHTDASH_TOOL_SAFETY_MODE=read-only`.
+Operates in `LIGHTDASH_TOOLS_SAFETY_MODE=read-only`.

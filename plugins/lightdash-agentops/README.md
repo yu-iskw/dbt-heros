@@ -24,7 +24,7 @@ The `lightdash-agentops` plugin provides a comprehensive suite of tools for buil
 
 ## Safety Modes
 
-This plugin enforces safety modes via `LIGHTDASH_TOOL_SAFETY_MODE`:
+This plugin enforces safety modes via `LIGHTDASH_TOOLS_SAFETY_MODE`:
 
 - `read-only`: Only inspection tools are available.
 - `write`: Allows creating and updating agents/evaluations.
@@ -32,7 +32,7 @@ This plugin enforces safety modes via `LIGHTDASH_TOOL_SAFETY_MODE`:
 
 ## Getting Started
 
-1. Set your `LIGHTDASH_TOOL_SAFETY_MODE` environment variable.
+1. Set your `LIGHTDASH_TOOLS_SAFETY_MODE` environment variable.
 2. Use the `manage-lightdash-agents` skill to create your first agent persona.
 3. Define evaluation test cases using `run-lightdash-evals`.
 4. Run evaluations and use `agent-tuner` to autonomously improve your agent's prompts.

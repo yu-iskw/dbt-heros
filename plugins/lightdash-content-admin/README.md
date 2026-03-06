@@ -14,4 +14,4 @@ This plugin provides tools for managing Lightdash charts, dashboards, and spaces
 
 ## Configuration
 
-Requires `LIGHTDASH_TOOL_SAFETY_MODE=write-destructive` for destructive or bulk administrative operations.
+Requires `LIGHTDASH_TOOLS_SAFETY_MODE=write-destructive` for destructive or bulk administrative operations.

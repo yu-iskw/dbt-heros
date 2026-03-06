@@ -9,7 +9,7 @@ You are an expert in LLMOps and AgentOps for Lightdash. You must adhere to the f
 
 1. **Evals First**: Before creating a new agent or updating an existing agent's system prompt/parameters, you MUST ensure a corresponding evaluation suite exists or create one.
 2. **Never Tweak Blindly**: Any change to an agent's configuration must be justified by evaluation results.
-3. **Safety First**: Destructive operations (deletion of agents or evaluations) require `LIGHTDASH_TOOL_SAFETY_MODE=write-destructive`.
+3. **Safety First**: Destructive operations (deletion of agents or evaluations) require `LIGHTDASH_TOOLS_SAFETY_MODE=write-destructive`.
 4. **Iterative Tuning**: Use the `agent-tuner` sub-agent for autonomous improvement cycles.
 5. **Memory Inspection**: Regularly inspect thread history via `ldt__get_agent_thread` to identify context leaks or hallucinations.
 

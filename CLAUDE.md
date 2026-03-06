@@ -20,7 +20,7 @@ This is a **multi-plugin monorepo** providing specialized Claude Code plugins fo
 All destructive operations are **deterministically enforced** through PreToolUse hooks, not just LLM prompts. Safety modes:
 
 - `read-only`: No mutations allowed
-- `write-safe`: Non-destructive writes only
+- `write-idempotent`: Non-destructive writes only
 - `write-destructive`: Requires explicit opt-in
 
 **Rule:** When implementing or using tools, verify the safety mode enforcement is in place before allowing destructive operations.

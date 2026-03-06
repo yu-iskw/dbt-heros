@@ -25,4 +25,4 @@ LIGHTDASH_API_URL=https://app.lightdash.cloud/api/v1
 
 ## Configuration
 
-Requires `LIGHTDASH_TOOL_SAFETY_MODE=write-destructive` for user deletion and project modification.
+Requires `LIGHTDASH_TOOLS_SAFETY_MODE=write-destructive` for user deletion and project modification.

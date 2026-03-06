@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "You are using the Lightdash AgentOps plugin. This plugin supports AI Agent management and tuning. For destructive actions like deleting agents or evaluations, ensure 'LIGHTDASH_TOOL_SAFETY_MODE' is set to 'write-destructive' (currently: $LIGHTDASH_TOOL_SAFETY_MODE). ALWAYS obtain explicit user confirmation before any deletion."
+            "prompt": "You are using the Lightdash AgentOps plugin. This plugin supports AI Agent management and tuning. For destructive actions like deleting agents or evaluations, ensure 'LIGHTDASH_TOOLS_SAFETY_MODE' is set to 'write-destructive' (currently: $LIGHTDASH_TOOLS_SAFETY_MODE). ALWAYS obtain explicit user confirmation before any deletion."
           }
         ]
       }

@@ -31,7 +31,7 @@ Plugin manifests (e.g., `.mcp.json`) must reflect the necessary safety mode for 
 
 - Administrative plugins (e.g., `lightdash-org-admin`) require `write-destructive` for management tasks.
 - Content management plugins (e.g., `lightdash-content-admin`) require `write-destructive` for reorganization and deletions.
-- Development and Analysis plugins typically operate in `read-only` or `write-safe` modes depending on their impact on remote state.
+- Development and Analysis plugins typically operate in `read-only` or `write-idempotent` modes depending on their impact on remote state.
 
 ### 4. Application to dbt Agents
 
